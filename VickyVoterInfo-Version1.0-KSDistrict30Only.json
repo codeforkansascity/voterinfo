@@ -1,0 +1,1189 @@
+{
+  "version": "11.4",
+  "site": "https://textit.in",
+  "flows": [
+    {
+      "entry": "60f2d208-89b3-4c55-aa46-37579f4be0c0",
+      "action_sets": [
+        {
+          "uuid": "46724913-3aa7-4ab9-83bd-c3467b7daa8c",
+          "x": 491,
+          "y": 330,
+          "destination": "5495d965-f92d-49f7-a862-371ff8517a53",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "04b2663e-3f34-4f6a-9cae-98e82394acc5",
+              "label": "Vanid",
+              "field": "vanid",
+              "value": "@flow.newvanid.text"
+            }
+          ],
+          "exit_uuid": "8361d944-f7bb-4236-9342-f2e2b0e02d13"
+        },
+        {
+          "uuid": "cf6ab218-ee8e-4749-92c5-de8b3825fd66",
+          "x": 323,
+          "y": 493,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "79b4b7db-ecc7-4271-95d7-a1cd8baff62c",
+              "msg": {
+                "base": "Hmm. We have you in the database under a different ID. Can we confirm your information again?"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "54467f85-0e46-4eac-9a4a-d9b32bba3011"
+        },
+        {
+          "uuid": "893888b1-c120-4051-a4ac-b3f3dd1cdba3",
+          "x": 66,
+          "y": 1148,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "88341069-3bb6-4775-a1e5-325b258e6fd5",
+              "msg": {
+                "base": "Great! You are registered and ready to vote! I'll be in touch with your sample ballot - typically this is published about 3 weeks before the next election!"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            },
+            {
+              "type": "save",
+              "uuid": "76bece8e-5a74-46a4-95ed-ffaeb10be317",
+              "label": "Addressline1",
+              "field": "addressline1",
+              "value": "@extra.addressLine1"
+            }
+          ],
+          "exit_uuid": "d76ceb9f-7ebc-4bf1-9d28-e8cf5f82a00d"
+        },
+        {
+          "uuid": "0f215780-aebb-4b88-86d2-eb1e5f279739",
+          "x": 0,
+          "y": 550,
+          "destination": "70dcaf52-069c-4721-9734-97056efdae84",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "b4560459-1b7e-4f63-a316-b139e863cd34",
+              "msg": {
+                "base": "We have the following address on file for you:\n\n@extra.address\n\nIs this correct? Type yes or no"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "180d113c-b891-4278-a8df-f96406fae835"
+        },
+        {
+          "uuid": "50834796-574a-4e3a-8582-f337efdd7e42",
+          "x": 17,
+          "y": 930,
+          "destination": "70dcaf52-069c-4721-9734-97056efdae84",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "e1c6a0f5-ca95-4ead-a124-93c4c8d45b46",
+              "msg": {
+                "base": "I found your registration! I have you at: \n@extra.address\n\nis this correct? Type yes or no."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "cd6b4961-cc0a-4db2-9832-5fdc34c660a8"
+        },
+        {
+          "uuid": "816fc62f-792b-4c72-82b5-66b6f13e6135",
+          "x": 644,
+          "y": 1119,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "373aff22-156e-46c3-9dd5-444fbf0fdc36",
+              "msg": {
+                "base": "You must have an incorrect/out-of-date voter registration, because we matched your name and phone at that address. Please re-register at https://turbovote.org"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "6b68dd39-fdc9-4700-a072-b5311c3e78ca"
+        },
+        {
+          "uuid": "eeffda9e-7a87-4e10-a289-06a394473842",
+          "x": 678,
+          "y": 959,
+          "destination": "70dcaf52-069c-4721-9734-97056efdae84",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "1881801b-bae5-47de-a6b8-06a25e644880",
+              "msg": {
+                "base": "Invalid response. Please say yes or no."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "57c25ce7-2400-4605-9956-ab9345c1fb2e"
+        },
+        {
+          "uuid": "38724443-1818-4032-b119-e7196c01a3b6",
+          "x": 833,
+          "y": 0,
+          "destination": "6646e326-0e0d-40d7-9e6d-aba34946b8b8",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "3a2b720c-8ef9-462a-b7bc-93e0665ca1f7",
+              "msg": {
+                "base": "I didn't find a match. Great! That means I made a new friend. We'll get you registered online. What's your home state?"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "3eb84243-7b9a-47c8-aefe-a1abba276953"
+        },
+        {
+          "uuid": "1e6b67b9-2bd9-441f-af84-bb88ab89a2dc",
+          "x": 742,
+          "y": 197,
+          "destination": "5b8f8f23-8826-4970-a7d1-641077ac5523",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "e20ed7a4-cec0-4d35-9f8a-472b09c69339",
+              "label": "Checkedtwice",
+              "field": "checkedtwice",
+              "value": "true"
+            },
+            {
+              "type": "reply",
+              "uuid": "15ed8993-da78-480d-a58f-e524845dd08c",
+              "msg": {
+                "base": "Hmmm...I haven't narrowed you down to a unique voter record yet. What's your 5 digit zipcode?"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "70e682f5-df1e-4af6-97a5-bd4fa812eeff"
+        },
+        {
+          "uuid": "70c254ae-ae26-420d-bba5-b818e5ce2df4",
+          "x": 1099,
+          "y": 680,
+          "destination": "5b8f8f23-8826-4970-a7d1-641077ac5523",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "9eb68389-c2f7-4a1c-9894-f16fcbaf3b92",
+              "msg": {
+                "base": "Invalid zipcode. Please enter your 5 digit zip code."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "b14da911-ca53-4f26-b7e5-46910c29afd2"
+        },
+        {
+          "uuid": "9527d9cd-7c74-4fd4-978d-de213ae21c46",
+          "x": 717,
+          "y": 660,
+          "destination": "e1f9098f-828c-42b3-a96e-e798650adb51",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "17bf0559-6fbc-447f-bbec-6eec052c6fca",
+              "label": "Zip5",
+              "field": "zip5",
+              "value": "@flow.zip5.text"
+            },
+            {
+              "type": "reply",
+              "uuid": "356369f8-924c-4276-83fe-250a3903ef43",
+              "msg": {
+                "base": "Sweet. And finally, what is your date of birth? Please enter in YYYY-MM-DD format."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "0e994cda-363c-401c-adaf-ae074f559938"
+        },
+        {
+          "uuid": "b74f4cf4-0a99-4b8a-94e5-bc032b69d78a",
+          "x": 971,
+          "y": 1048,
+          "destination": "9d84b853-82dd-447e-ade5-6206219f1c1d",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "c1d5f215-7051-4671-ac80-edb5c1dc5b54",
+              "label": "Dob",
+              "field": "dob",
+              "value": "@flow.dob.text"
+            }
+          ],
+          "exit_uuid": "cdd4485a-18f2-4442-906b-4182a156d3d0"
+        },
+        {
+          "uuid": "49091690-48ca-40d7-98b9-8f6adb81c9ae",
+          "x": 1235,
+          "y": 986,
+          "destination": "e1f9098f-828c-42b3-a96e-e798650adb51",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "06a74fb8-d2a0-475c-bf39-647cde823cde",
+              "msg": {
+                "base": "Oops. That wasn't a date format I can handle - sorry about that! Please enter your date of birth in YYYY-MM-DD format. Please include the dashes as well"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "746f5e92-fafd-4930-84a6-5f1fc9c3eb91"
+        },
+        {
+          "uuid": "47ab5c8c-714b-4edc-a5fc-0ae4d251d97f",
+          "x": 953,
+          "y": 309,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "1b981557-8789-4083-8605-c1c4b5f6da42",
+              "msg": {
+                "base": "Free State Forever! Did you know you can register to vote in Kansas online? Don't let Kobach tell you that you can't! Register here: https://ksvotes.org"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "2c6ffa4f-851f-4731-ac43-92cd71223207"
+        },
+        {
+          "uuid": "bac61b6d-ed03-4ce9-ab3a-0a802510b8ce",
+          "x": 1201,
+          "y": 305,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "26135bde-2e34-4573-99c7-0936849387c7",
+              "msg": {
+                "base": "Go Tigers! Here's a site you can use to register to vote online in the great state of Missouri: https://turbovote.org"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "855a31f0-b9d4-4e34-90c5-b29c9361974e"
+        },
+        {
+          "uuid": "9ce9f03a-7026-46c1-9e14-748d6cdd7cac",
+          "x": 1160,
+          "y": 8,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "4811a49d-a548-4e0b-9139-10a4e63663c6",
+              "msg": {
+                "base": "Great! You can register to vote online using the Federal form via https://turbovote.org"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "e01ac478-169f-41c9-bdef-f7f38d6b293b"
+        },
+        {
+          "uuid": "9d84b853-82dd-447e-ade5-6206219f1c1d",
+          "x": 924,
+          "y": 1298,
+          "destination": "72585155-60af-4c71-9740-4327e7a4f5d2",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "2332ed33-e624-48a2-a233-e321eb29b1ab",
+              "msg": {
+                "base": "Great! Finally, what is your street number and street name (e.g. 110 N 8th St)? Note: We only need this information to verify your identity in the voter DB"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "a1a1ef02-370c-437e-b02e-fa9234837e91"
+        }
+      ],
+      "rule_sets": [
+        {
+          "uuid": "cabaf1e9-7d2b-472f-a6b8-b55b87000537",
+          "x": 22,
+          "y": 154,
+          "label": "currVanId",
+          "rules": [
+            {
+              "uuid": "7c200775-ad0a-4689-9f8f-855fc7de15b6",
+              "category": {
+                "base": "databaseMatch"
+              },
+              "destination": "5495d965-f92d-49f7-a862-371ff8517a53",
+              "destination_type": "R",
+              "test": {
+                "type": "eq",
+                "test": "@flow.newvanid.text"
+              },
+              "label": null
+            },
+            {
+              "uuid": "88fcfcdd-fa9a-440e-9299-d78941c33d24",
+              "category": {
+                "base": "vanIdDatabaseMismatch"
+              },
+              "destination": "cf6ab218-ee8e-4749-92c5-de8b3825fd66",
+              "destination_type": "A",
+              "test": {
+                "type": "not_empty"
+              },
+              "label": null
+            },
+            {
+              "uuid": "287c8573-7e10-4959-8edd-84b349cec60f",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "46724913-3aa7-4ab9-83bd-c3467b7daa8c",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "contact_field",
+          "response_type": "",
+          "operand": "@contact.vanid",
+          "config": {}
+        },
+        {
+          "uuid": "5495d965-f92d-49f7-a862-371ff8517a53",
+          "x": 98,
+          "y": 356,
+          "label": "Address",
+          "rules": [
+            {
+              "uuid": "ade90ed2-70de-42fb-a900-de455f0b5847",
+              "category": {
+                "base": "noAddress"
+              },
+              "destination": "0f215780-aebb-4b88-86d2-eb1e5f279739",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_phrase",
+                "test": {
+                  "base": "@extra.address"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "96e3cef0-9733-41c3-8a7e-24b12daff793",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "50834796-574a-4e3a-8582-f337efdd7e42",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "expression",
+          "response_type": "",
+          "operand": "@extra.address",
+          "config": {}
+        },
+        {
+          "uuid": "70dcaf52-069c-4721-9734-97056efdae84",
+          "x": 299,
+          "y": 954,
+          "label": "Response 4",
+          "rules": [
+            {
+              "uuid": "e57c1757-4cd6-427a-af57-e47a06b96188",
+              "category": {
+                "base": "Yes"
+              },
+              "destination": "893888b1-c120-4051-a4ac-b3f3dd1cdba3",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "yes"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "49d5d6eb-7e2a-473e-b942-bd280f15be74",
+              "category": {
+                "base": "No"
+              },
+              "destination": "816fc62f-792b-4c72-82b5-66b6f13e6135",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "no"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "bfdecf0c-a290-4987-ac9d-c60ecf786d1e",
+              "category": {
+                "base": "Yes"
+              },
+              "destination": "893888b1-c120-4051-a4ac-b3f3dd1cdba3",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "y"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "3ceea996-a7f2-4d96-9b49-d9c4a61aa14a",
+              "category": {
+                "base": "No"
+              },
+              "destination": "816fc62f-792b-4c72-82b5-66b6f13e6135",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "n"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "361aa69a-150a-4660-99f2-5f312491c7c1",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "eeffda9e-7a87-4e10-a289-06a394473842",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "60f2d208-89b3-4c55-aa46-37579f4be0c0",
+          "x": 66,
+          "y": 0,
+          "label": "newVanId",
+          "rules": [
+            {
+              "uuid": "9f2bac7c-0342-442f-aebe-f082c60e87a3",
+              "category": {
+                "base": "receivedVanId"
+              },
+              "destination": "cabaf1e9-7d2b-472f-a6b8-b55b87000537",
+              "destination_type": "R",
+              "test": {
+                "type": "number"
+              },
+              "label": null
+            },
+            {
+              "uuid": "ea450289-68c3-41aa-9c47-f2e42e6fee14",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "d4f86932-3019-46de-8094-a8c7455d3a38",
+              "destination_type": "R",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "expression",
+          "response_type": "",
+          "operand": "@extra.vanid",
+          "config": {}
+        },
+        {
+          "uuid": "d4f86932-3019-46de-8094-a8c7455d3a38",
+          "x": 479,
+          "y": 17,
+          "label": "value",
+          "rules": [
+            {
+              "uuid": "f21d62dc-41a1-44a0-8b45-18d35d5e2733",
+              "category": {
+                "base": "False"
+              },
+              "destination": "1e6b67b9-2bd9-441f-af84-bb88ab89a2dc",
+              "destination_type": "A",
+              "test": {
+                "type": "contains",
+                "test": {
+                  "base": "false"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "6fc48c28-425a-4f00-bb49-9d7e35ecbd32",
+              "category": {
+                "base": "True"
+              },
+              "destination": "38724443-1818-4032-b119-e7196c01a3b6",
+              "destination_type": "A",
+              "test": {
+                "type": "contains",
+                "test": {
+                  "base": "true"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "075773c9-832e-4fb2-ae42-4f555c005d93",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "1e6b67b9-2bd9-441f-af84-bb88ab89a2dc",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "contact_field",
+          "response_type": "",
+          "operand": "@contact.checkedtwice",
+          "config": {}
+        },
+        {
+          "uuid": "5b8f8f23-8826-4970-a7d1-641077ac5523",
+          "x": 771,
+          "y": 504,
+          "label": "zip5",
+          "rules": [
+            {
+              "uuid": "176d0901-4d52-4387-bf83-82a2d58f22d2",
+              "category": {
+                "base": "zip5"
+              },
+              "destination": "9527d9cd-7c74-4fd4-978d-de213ae21c46",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "base": "\\d{5}"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "b4a5bed6-d992-47e1-a84f-f3cd7306829c",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "70c254ae-ae26-420d-bba5-b818e5ce2df4",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "e1f9098f-828c-42b3-a96e-e798650adb51",
+          "x": 1027,
+          "y": 897,
+          "label": "dob",
+          "rules": [
+            {
+              "uuid": "ee989a0c-8e7a-484c-a6cc-0929bc6a90d0",
+              "category": {
+                "base": "dob"
+              },
+              "destination": "b74f4cf4-0a99-4b8a-94e5-bc032b69d78a",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "base": "(\\d{4})-((?:0[1-9])|(?:1[0-2]))-((?:0[0-9])|(?:[1-2][0-9])|(?:3[0-1]))"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "8fe8cc23-ac2e-4c27-8e04-522b36de152a",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "49091690-48ca-40d7-98b9-8f6adb81c9ae",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "73fc35e0-8d5e-4b7e-88fe-ffe44f83e23d",
+          "x": 876,
+          "y": 1732,
+          "label": "Response 8",
+          "rules": [
+            {
+              "uuid": "2f25c8fe-6ed6-4c57-ad2a-dd5eab7002f7",
+              "category": {
+                "base": "Success"
+              },
+              "destination": null,
+              "destination_type": null,
+              "test": {
+                "type": "webhook_status",
+                "status": "success"
+              },
+              "label": null
+            },
+            {
+              "uuid": "b6788c0d-422e-463e-8c5c-9d2d54c753f5",
+              "category": {
+                "base": "Failure"
+              },
+              "destination": null,
+              "destination_type": null,
+              "test": {
+                "type": "webhook_status",
+                "status": "failure"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "resthook",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {
+            "resthook": "zapierpostrequest"
+          }
+        },
+        {
+          "uuid": "6646e326-0e0d-40d7-9e6d-aba34946b8b8",
+          "x": 1037,
+          "y": 203,
+          "label": "state",
+          "rules": [
+            {
+              "uuid": "b7b09c48-bfd6-4ced-8c25-51307b1e73ec",
+              "category": {
+                "base": "Kansas"
+              },
+              "destination": "47ab5c8c-714b-4edc-a5fc-0ae4d251d97f",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "kansas"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "41e8334b-4079-4aee-8416-4491293307b3",
+              "category": {
+                "base": "Missouri"
+              },
+              "destination": "bac61b6d-ed03-4ce9-ab3a-0a802510b8ce",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "missouri"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "5ff915fc-e2af-4181-be32-3be168167010",
+              "category": {
+                "base": "Kansas"
+              },
+              "destination": "47ab5c8c-714b-4edc-a5fc-0ae4d251d97f",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "KS"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "9f53c27b-1527-43cd-997e-4ea1c4a0c04f",
+              "category": {
+                "base": "Missouri"
+              },
+              "destination": "bac61b6d-ed03-4ce9-ab3a-0a802510b8ce",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "base": "MO"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "847de8c6-f904-42c0-ada0-a038e46283aa",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "9ce9f03a-7026-46c1-9e14-748d6cdd7cac",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "72585155-60af-4c71-9740-4327e7a4f5d2",
+          "x": 873,
+          "y": 1535,
+          "label": "streetAddress",
+          "rules": [
+            {
+              "uuid": "6158bae1-b4f8-420c-b110-a066fa5c79d9",
+              "category": {
+                "base": "All Responses"
+              },
+              "destination": "73fc35e0-8d5e-4b7e-88fe-ffe44f83e23d",
+              "destination_type": "R",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        }
+      ],
+      "base_language": "base",
+      "flow_type": "F",
+      "version": "11.4",
+      "metadata": {
+        "name": "ProductionRequestMoreData-District30",
+        "saved_on": "2018-08-07T00:54:50.970897Z",
+        "revision": 3,
+        "uuid": "7c359912-70f4-449d-b7a0-2b9c97723b6e",
+        "expires": 43200,
+        "notes": [
+          {
+            "x": 321,
+            "y": 675,
+            "title": "",
+            "body": "Oddity in Textit - if the variable @extra.address *is* empty, in that there was no address on file, textit will interpret it as the string \"@extra.address\". Thus for split by expression, that will *not* be empty. So you have to split based on whether or not the variable @extra.address resolves to the string \"@extra.address\" or not. Kind of backwards"
+          }
+        ]
+      }
+    },
+    {
+      "entry": "2db6efd1-c393-4d78-8e5a-2a0399e32b58",
+      "action_sets": [
+        {
+          "uuid": "2db6efd1-c393-4d78-8e5a-2a0399e32b58",
+          "x": 108,
+          "y": 0,
+          "destination": "5fbe5dde-a63c-4d84-9e19-403e598621f3",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "e7e3ee9b-a70f-4b0a-968c-37f1ed1126bf",
+              "msg": {
+                "base": "Hi! I'm Vicky - the Voter Info Chatbot! I'll be hard at work keeping you up to date on important voter information. To get started, let's check if you are currently registered to vote. What is your first name? (I need your legal name, so no nicknames, please!)"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "aaec0a36-f508-452f-9a94-4919986e1830"
+        },
+        {
+          "uuid": "a22cfd6d-7538-4f8a-aa2e-899d830f3474",
+          "x": 38,
+          "y": 332,
+          "destination": "5a7cf2ab-ca29-484f-9faa-36c106318a27",
+          "actions": [
+            {
+              "type": "add_group",
+              "uuid": "60c7ae2c-0f17-42c6-b59e-4f92d32740f6",
+              "groups": [
+                {
+                  "uuid": "5e70ee06-fdac-4b92-b513-84232a21b00a",
+                  "name": "Voters"
+                }
+              ]
+            },
+            {
+              "type": "save",
+              "uuid": "baba6ff9-fb46-4460-acc8-b7375efd79f1",
+              "label": "Checkedtwice",
+              "field": "checkedtwice",
+              "value": "false"
+            },
+            {
+              "type": "reply",
+              "uuid": "9a971967-8b84-4235-ad78-4cc0d01b4878",
+              "msg": {
+                "base": "Got it, thanks @flow.firstname. What is your last name?"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "08f5012f-399a-4c91-8988-f2f450c1b720"
+        },
+        {
+          "uuid": "0ca1f0ed-bb8c-4486-bc0d-e77a0e39c747",
+          "x": 1014,
+          "y": 19,
+          "destination": "5fbe5dde-a63c-4d84-9e19-403e598621f3",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "a2ba4623-8e7a-44e1-9e37-700fa188f873",
+              "msg": {
+                "base": "Oops. Not enough. Please provide a valid first name (we don't do special characters at the moment, but will support them soon)"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "7da26f83-b981-429a-9d0d-1d0397108cc0"
+        },
+        {
+          "uuid": "a5bc8731-2c1e-499d-a206-32c8754fcbf2",
+          "x": 987,
+          "y": 352,
+          "destination": "5a7cf2ab-ca29-484f-9faa-36c106318a27",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "2cb146b3-ec30-4e14-95cc-15795a7b0186",
+              "msg": {
+                "base": "Please enter a valid last name (We don't support special characters at the moment, but will soon!)"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "eaf60498-0cd2-46b2-a1f3-0441d5fa6ba0"
+        },
+        {
+          "uuid": "29fa31ed-ad18-4cec-a16e-b7e23448c7e8",
+          "x": 47,
+          "y": 583,
+          "destination": "1114ff97-8b0b-499d-9116-db5bb4b03c74",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "85c9f41b-c50c-4cc1-88b8-bb82aa36f179",
+              "label": "Firstname",
+              "field": "firstname",
+              "value": "@flow.firstname.text"
+            },
+            {
+              "type": "save",
+              "uuid": "8432cb5b-2a90-4abd-8074-2e53a042a306",
+              "label": "Lastname",
+              "field": "lastname",
+              "value": "@flow.lastname.text"
+            },
+            {
+              "type": "save",
+              "uuid": "e445cf96-382b-4421-b639-f6398dd39e3b",
+              "label": "Contact Name",
+              "field": "name",
+              "value": "@flow.firstname.text @flow.lastname.text"
+            }
+          ],
+          "exit_uuid": "f09f13be-7858-4129-856c-7ef2a3d3dd84"
+        },
+        {
+          "uuid": "a698afe1-aaca-4719-9ea2-d80c0e48d09a",
+          "x": 339,
+          "y": 993,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "a959b9a8-0c3e-47a5-adf3-b7c9bf7ced06",
+              "msg": {
+                "base": "Sorry, we were unable to contact the database. Please go to https://turbovote.org to find out if you are registered."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "8983db1b-45c9-43c1-8f0e-81ddbad4e93e"
+        }
+      ],
+      "rule_sets": [
+        {
+          "uuid": "5fbe5dde-a63c-4d84-9e19-403e598621f3",
+          "x": 627,
+          "y": 86,
+          "label": "firstName",
+          "rules": [
+            {
+              "uuid": "dbb9e73b-25ec-4c7a-bfc8-a51581323dd6",
+              "category": {
+                "base": "firstName"
+              },
+              "destination": "a22cfd6d-7538-4f8a-aa2e-899d830f3474",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "base": "[a-zA-Z]+"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "16acaf92-4d42-4d1e-853c-555ad830c196",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "0ca1f0ed-bb8c-4486-bc0d-e77a0e39c747",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {
+            "field_index": 0,
+            "field_delimiter": " "
+          }
+        },
+        {
+          "uuid": "5a7cf2ab-ca29-484f-9faa-36c106318a27",
+          "x": 641,
+          "y": 506,
+          "label": "lastName",
+          "rules": [
+            {
+              "uuid": "f08110c9-d3dd-4280-a90f-1422879fe221",
+              "category": {
+                "base": "lastName"
+              },
+              "destination": "29fa31ed-ad18-4cec-a16e-b7e23448c7e8",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "base": "[a-zA-Z]+\\s*[a-zA-Z]*"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "174429fd-586e-4713-ada6-172a55994732",
+              "category": {
+                "base": "Other"
+              },
+              "destination": "a5bc8731-2c1e-499d-a206-32c8754fcbf2",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {
+            "field_index": 1,
+            "field_delimiter": " "
+          }
+        },
+        {
+          "uuid": "1114ff97-8b0b-499d-9116-db5bb4b03c74",
+          "x": 32,
+          "y": 968,
+          "label": "Response 3",
+          "rules": [
+            {
+              "uuid": "47a697c8-2759-4bcd-946f-dd802b182bf1",
+              "category": {
+                "base": "Success"
+              },
+              "destination": null,
+              "destination_type": null,
+              "test": {
+                "type": "webhook_status",
+                "status": "success"
+              },
+              "label": null
+            },
+            {
+              "uuid": "9d1923ea-3e15-4cc2-816e-57a02837c6af",
+              "category": {
+                "base": "Failure"
+              },
+              "destination": "a698afe1-aaca-4719-9ea2-d80c0e48d09a",
+              "destination_type": "A",
+              "test": {
+                "type": "webhook_status",
+                "status": "failure"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "resthook",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {
+            "resthook": "zapierpostrequest"
+          }
+        }
+      ],
+      "base_language": "base",
+      "flow_type": "F",
+      "version": "11.4",
+      "metadata": {
+        "name": "ProductionDataFlowMaster-District30",
+        "saved_on": "2018-08-28T00:25:20.337449Z",
+        "revision": 62,
+        "uuid": "a9f708bd-f9d1-411d-9f28-3c0665101bcd",
+        "expires": 43200,
+        "notes": [
+          {
+            "x": 805,
+            "y": 871,
+            "title": "New Note",
+            "body": "..."
+          }
+        ]
+      }
+    }
+  ],
+  "campaigns": [],
+  "triggers": [
+    {
+      "trigger_type": "K",
+      "keyword": "votebrandon",
+      "flow": {
+        "uuid": "a9f708bd-f9d1-411d-9f28-3c0665101bcd",
+        "name": "ProductionDataFlowMaster-District30"
+      },
+      "groups": [],
+      "channel": null
+    },
+    {
+      "trigger_type": "K",
+      "keyword": "votebrandon",
+      "flow": {
+        "uuid": "a9f708bd-f9d1-411d-9f28-3c0665101bcd",
+        "name": "ProductionDataFlowMaster-District30"
+      },
+      "groups": [
+        {
+          "uuid": "5e70ee06-fdac-4b92-b513-84232a21b00a",
+          "name": "Voters"
+        }
+      ],
+      "channel": null
+    }
+  ]
+}
